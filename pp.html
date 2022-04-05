@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>little animals pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style type="text/css">
+     
+      body{
+          color:rgb(0, 0, 0);
+          background-color:rgb(255, 255, 255) }
+  </style>
+  </head>
+<body>
+     <!-- navbar -->  
+ <nav class="navbar navbar-expand-sm  navbar-light bg-light" >
+   <div class="container-fluid">
+     <a  class="navbar-brand"href="#">
+      <img scr="#" alt="" >
+    </a>
+      <button class ="navbar-toggler"
+       type="button"
+       data-toggle="collapse"
+       data-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent"
+       aria-expanded="false"
+       aria-label="toogle navigation">
+       <span class="navbar-toggler-icon"> </span>
+      </button>
+ 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Seguir Pedido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ">+56978956589</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ">Littlepet@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+   </div>
+ </nav>
+     
+<!-- barra de busqueda -->
+<nav class="navbar navbar-light bg-light"align="right" >
+    <div class="container-fluid">
+      <img src="file:///C:/Users/ninos/OneDrive/Escritorio/logo2.jpeg" width="100" height="100" >
+      <h1 align="center">Little Animals Pet</h1>
+
+      <a class="navbar-brand"></a>
+      <div class="box">
+        <div class="container-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="search" id="search" placeholder="Search...">
+           
+        </div>
+   </div>
+   
+      <!--carrito de compras-->
+        <p align="right">
+            <button type="button"
+                class="btn btn-default btn-sm">
+                <span class="glyphicon
+                    glyphicon-shopping-cart">
+                </span>
+                <b> Add to Cart </b>
+            </button>
+        </p>
+    </div>
+    </div>
+  </nav>
+<!--dropdowns-->
+<div class="btn-group" class="grid" style="--bs-columns: 4;">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+   Productos
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
+    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
+    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
+    <li><a class="dropdown-item" href="#">Entretención</a></li>
+    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
+    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
+    <li><a class="dropdown-item" href="#">Alimento </a></li>
+  </ul>
+</div>
+ 
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+    Perros
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
+    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
+    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
+    <li><a class="dropdown-item" href="#">Entretención</a></li>
+    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
+    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
+    <li><a class="dropdown-item" href="#">Alimento </a></li>
+  </ul>
+</div>
+ 
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+    Gatos
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
+    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
+    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
+    <li><a class="dropdown-item" href="#">Entretención</a></li>
+    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
+    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
+    <li><a class="dropdown-item" href="#">Alimento </a></li>
+  </ul>
+</div>
+ 
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+    Exoticos
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
+    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
+    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
+    <li><a class="dropdown-item" href="#">Entretención</a></li>
+    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
+    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
+    <li><a class="dropdown-item" href="#">Alimento </a></li>
+  </ul>
+</div>
+<!-- banner -->
+<div class="center">
+  <img src="https://www.pethappy.cl/imagenes/banner/2207061640_CATEGORIAS-PET_01.png"  alt="Perros"/> 
+  
+  <img src="https://www.pethappy.cl/imagenes/banner/2207061716_CATEGORIAS-PET_02.png"  alt="Gatos" />
+           
+  <img src="https://www.pethappy.cl/imagenes/banner/2207061735_CATEGORIAS-PET_03.png" alt="Aves"/>
+         
+  <img src="https://www.pethappy.cl/imagenes/banner/2207061751_CATEGORIAS-PET_04.png"  alt="Roedores"/>
+         
+  <img src="https://www.pethappy.cl/imagenes/banner/2207061809_CATEGORIAS-PET_05.png"  alt="Reptiles" />
+         
+ <img src="https://www.pethappy.cl/imagenes/banner/2207061821_CATEGORIAS-PET_06.png" alt="Acuaticos" />
+         
+</div>
+ 
+ 
+   <!--carrusel-->
+   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://laikapp.s3.amazonaws.com/dev_images_banners/1646344256Accesorios_Mesa%20de%20trabajo%201%20copia.jpg" class="d-block wi-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://laikapp.s3.amazonaws.com/dev_images_banners/1646344223Accesorios_Mesa%20de%20trabajo%201%20copia%202.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://laikapp.s3.amazonaws.com/dev_images_banners/1646344551Higiene%20Gato.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <h1 align="center">Productos </h1>
+   <div style="text-align: center;"></div>
+ 
+   
+   <!--Placeholders-->
+  <div class="container">  
+    <div class="row">      
+      <div class="col-md">        
+          <div class="card">
+            <img class="card-img-top w-50 h-50" src="https://dojiw2m9tvv09.cloudfront.net/43691/product/obt-gatoazul014762.png">            
+            <div class="card-body">
+              <h4 class="card-title">Adult Cat Fish Oven-Baked 2.27 Kg</h4>
+              <p class="card-text">$24.390</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>          
+      </div>
+      <div class="col-md">        
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Casa futurista Amarilla para pequeños animales</h4>
+              <p class="card-text">$4.490</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+            <img class="card-img-bottom  w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2022/03/CASITA-AMARILLA.png">                        
+          </div>          
+      </div>
+      <div class="col-md">        
+        <div class="card">
+          <img class="card-img-top w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2020/10/frontrine-100ml.jpg.webp">            
+          <div class="card-body">
+            <h4 class="card-title">Frontline Spray 100ml</h4>
+            <p class="card-text">$11.000</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>          
+    </div>
+    <div class="col-md">        
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Vet Life Etruvita Unrinatria Felina 2kg</h4>
+            <p class="card-text">$19.000</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+          <img class="card-img-bottom  w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2021/11/7898604431220.png.webp">                        
+        </div>          
+    </div>
+    <div class="col-md">        
+        <div class="card">
+          <img class="card-img-top w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2021/11/bravecto.png.webp">            
+          <div class="card-body">
+            <h4 class="card-title">Bravecto gatos 250mg-2,8-25kg</h4>
+            <p class="card-text">$20.000/p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>          
+    </div>
+    </div>
+   
+   <div style="text-align: center;">
+      <h1 align="center">Acerca de Nosotros</h1>
+      <p class="card-text">Empezo con una venta de productos de mascotas por un grupo de amigas, todo esto para ayudar
+          a una fundación sin fines de lucro,comenzo por redes sociales. Para poder seguir apoyando a la fundación ustedes pueden aportar copn donaciones
+          para todas aquellos animales que necesitan apoyo en diferentes dificultades que ellos pueden tener.
+      </p>
+   </div>
+ 
+  </div>
+ 
+</body>
+</html>
