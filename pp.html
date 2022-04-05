@@ -14,6 +14,54 @@
       body{
           color:rgb(0, 0, 0);
           background-color:rgb(255, 255, 255) }
+          * {
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            height:100%;
+        }
+        /* Div que engloba el contenido de la página menos el footer */
+        #wrapper {
+            min-height:100%;
+        }
+        header {
+            display:block;
+            background:#ccc;
+            padding:10px 0px;
+        }
+        section {
+            overflow: auto;
+            /* Definimos el padding inferior:
+               50px del pie de pagina mas 10px de separacion
+            */
+            padding-bottom: 60px;
+            /* Definimos un padding superior */
+            padding-top:30px;
+        }
+        footer {
+            position: relative;
+            /* Altura total del footer en px con valor negativo */
+            margin-top: -10px;
+            /* Altura del footer en px. Se han restado los 5px del margen
+               superior mas los 5px del margen inferior
+            */
+            height: 40px;
+            padding:10px 0px;
+            clear: both;
+            background: #f5f7f7;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+ 
+        /* Esta clase define la anchura del contenido y la posicion centrada 
+           El contenido queda centrado y limitado, pero la cabecera y el pie
+           llegan hasta los limites del navegador.
+        */
+        .define {
+            width:960px;
+            margin:0 auto;
+        }
   </style>
   </head>
 <body>
@@ -36,13 +84,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Seguir Pedido</a>
+            <a class="nav-link active" aria-current="page" href="seguirpedido.html">Seguir Pedido</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Registrarse</a>
+            <a class="nav-link" href="registro.html">Registrarse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link ">+56978956589</a>
@@ -78,88 +126,83 @@
                     glyphicon-shopping-cart">
                 </span>
                 <b> Add to Cart </b>
+              </a>
+              <a href='compras.html'>
             </button>
         </p>
     </div>
     </div>
   </nav>
 <!--dropdowns-->
-<div class="btn-group" class="grid" style="--bs-columns: 4;">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-   Productos
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
-    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
-    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
-    <li><a class="dropdown-item" href="#">Entretención</a></li>
-    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
-    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
-    <li><a class="dropdown-item" href="#">Alimento </a></li>
-  </ul>
-</div>
- 
-<div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
-    Perros
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
-    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
-    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
-    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
-    <li><a class="dropdown-item" href="#">Entretención</a></li>
-    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
-    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
-    <li><a class="dropdown-item" href="#">Alimento </a></li>
-  </ul>
-</div>
- 
-<div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-    Gatos
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
-    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
-    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
-    <li><a class="dropdown-item" href="#">Entretención</a></li>
-    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
-    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
-    <li><a class="dropdown-item" href="#">Alimento </a></li>
-  </ul>
-</div>
- 
-<div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
-    Exoticos
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
-    <li><a class="dropdown-item" href="#">Transpote y Seguridad</a></li>
-    <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
-    <li><a class="dropdown-item" href="#">Vestuario y Acsesorios </a></li>
-    <li><a class="dropdown-item" href="#">Entretención</a></li>
-    <li><a class="dropdown-item" href="#">Platos y Bebedores</a></li>
-    <li><a class="dropdown-item" href="#">Camas y Estar </a></li>
-    <li><a class="dropdown-item" href="#">Alimento </a></li>
-  </ul>
-</div>
+  <div>
+    <div class="btn-group" class="grid" style="--bs-columns: 4;">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+       Productos
+     </button>
+     <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+       <li><a class="dropdown-item" href="saludybienestar.html">Salud y Bienestar</a></li>
+       <li><a class="dropdown-item" href="vestuarioyaccesorios.html">Vestuario y Accesorios </a></li>
+       <li><a class="dropdown-item" href="entretencion.html">Entretención</a></li>
+       <li><a class="dropdown-item" href="alimentos.html">Alimento </a></li>
+     </ul>
+    </div>
+    
+    <div class="btn-group">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+       Perros
+     </button>
+     <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+       <li><a class="dropdown-item" href="saludybienestarperros.html">Salud y Bienestar</a></li>
+       <li><a class="dropdown-item" href="accesoriosperros.html">Vestuario y Acsesorios </a></li>
+       <li><a class="dropdown-item" href="entretenimientoperros.html">Entretención</a></li>
+       <li><a class="dropdown-item" href="alimentoperros.html">Alimento </a></li>
+     </ul>
+    </div>
+    
+    <div class="btn-group">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+       Gatos
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+        <li><a class="dropdown-item" href="saludybienestargatos.html">Salud y Bienestar</a></li>
+        <li><a class="dropdown-item" href="accesoriosgatos.html">Vestuario y Acsesorios </a></li>
+        <li><a class="dropdown-item" href="entretenimientogatos.html">Entretención</a></li>
+        <li><a class="dropdown-item" href="alimentogatos.html">Alimento </a></li>
+      </ul>
+    </div>
+    
+   <div class="btn-group">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+       Exoticos
+     </button>
+     <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+       <li><a class="dropdown-item" href="saludbienestarexoticos.html">Salud y Bienestar</a></li>
+       <li><a class="dropdown-item" href="vestuariosaccesoriosexoticos.html">Vestuario y Accesorios </a></li>
+       <li><a class="dropdown-item" href="entretencionexoticos.html">Entretención</a></li>
+       <li><a class="dropdown-item" href="alimentosexoticos.html">Alimento </a></li>
+     </ul>
+    </div> 
+  </div>  
 <!-- banner -->
-<div class="center">
-  <img src="https://www.pethappy.cl/imagenes/banner/2207061640_CATEGORIAS-PET_01.png"  alt="Perros"/> 
+
   
-  <img src="https://www.pethappy.cl/imagenes/banner/2207061716_CATEGORIAS-PET_02.png"  alt="Gatos" />
-           
-  <img src="https://www.pethappy.cl/imagenes/banner/2207061735_CATEGORIAS-PET_03.png" alt="Aves"/>
-         
-  <img src="https://www.pethappy.cl/imagenes/banner/2207061751_CATEGORIAS-PET_04.png"  alt="Roedores"/>
-         
-  <img src="https://www.pethappy.cl/imagenes/banner/2207061809_CATEGORIAS-PET_05.png"  alt="Reptiles" />
-         
- <img src="https://www.pethappy.cl/imagenes/banner/2207061821_CATEGORIAS-PET_06.png" alt="Acuaticos" />
-         
-</div>
- 
- 
+  <div aling="Center">
+    <a href='perros.html'>
+      <img src="https://www.pethappy.cl/imagenes/banner/2207061640_CATEGORIAS-PET_01.png"  alt="Perros"/> </a>
+      <a href='gatos.html'>
+        <img src="https://www.pethappy.cl/imagenes/banner/2207061716_CATEGORIAS-PET_02.png"  alt="Gatos" /> </a>
+      <a href='aves.html'>
+        <img src="https://www.pethappy.cl/imagenes/banner/2207061735_CATEGORIAS-PET_03.png" alt="Aves"/></a>
+        <a href='roedores.html'>
+          <img src="https://www.pethappy.cl/imagenes/banner/2207061751_CATEGORIAS-PET_04.png"  alt="Roedores"/></a>
+          <a href='reptiles.html'>
+            <img src="https://www.pethappy.cl/imagenes/banner/2207061809_CATEGORIAS-PET_05.png"  alt="Reptiles" />
+            <a href='acuaticos.html'>
+              <img src="https://www.pethappy.cl/imagenes/banner/2207061821_CATEGORIAS-PET_06.png" alt="Acuaticos" /></a>
+                        
+  </div>
+     
+
    <!--carrusel-->
    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -200,7 +243,7 @@
             <div class="card-body">
               <h4 class="card-title">Adult Cat Fish Oven-Baked 2.27 Kg</h4>
               <p class="card-text">$24.390</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="compras.html" class="btn btn-primary">Comprar</a>
             </div>
           </div>          
       </div>
@@ -209,7 +252,7 @@
             <div class="card-body">
               <h4 class="card-title">Casa futurista Amarilla para pequeños animales</h4>
               <p class="card-text">$4.490</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="compras.html" class="btn btn-primary">Comprar</a>
             </div>
             <img class="card-img-bottom  w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2022/03/CASITA-AMARILLA.png">                        
           </div>          
@@ -220,7 +263,7 @@
           <div class="card-body">
             <h4 class="card-title">Frontline Spray 100ml</h4>
             <p class="card-text">$11.000</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="compras.html" class="btn btn-primary">Comprar</a>
           </div>
         </div>          
     </div>
@@ -229,7 +272,7 @@
           <div class="card-body">
             <h4 class="card-title">Vet Life Etruvita Unrinatria Felina 2kg</h4>
             <p class="card-text">$19.000</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="compras.html" class="btn btn-primary">Comprar</a>
           </div>
           <img class="card-img-bottom  w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2021/11/7898604431220.png.webp">                        
         </div>          
@@ -240,7 +283,7 @@
           <div class="card-body">
             <h4 class="card-title">Bravecto gatos 250mg-2,8-25kg</h4>
             <p class="card-text">$20.000/p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="compras.html" class="btn btn-primary">Comprar</a>
           </div>
         </div>          
     </div>
@@ -249,12 +292,35 @@
    <div style="text-align: center;">
       <h1 align="center">Acerca de Nosotros</h1>
       <p class="card-text">Empezo con una venta de productos de mascotas por un grupo de amigas, todo esto para ayudar
-          a una fundación sin fines de lucro,comenzo por redes sociales. Para poder seguir apoyando a la fundación ustedes pueden aportar copn donaciones
-          para todas aquellos animales que necesitan apoyo en diferentes dificultades que ellos pueden tener.
+          a una fundación sin fines de lucro,comenzo por redes sociales. Para poder seguir apoyando a la fundación ustedes pueden aportar con donaciones
+          para todas aquellos animales que necesitan apoyo en diferentes dificultades que ellos puedan tener.
       </p>
-   </div>
- 
+
+    </div>
+  <!--Pie de página-->
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+            <a href="#" class="nav-link px2 text-muted">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px2 text-muted">Features</a>
+      </li>
+      <li class="nav-item">
+          <a href="#" class="nav-link px2 text-muted">Pricing</a>
+      </li>
+      <li class="nav-item">
+          <a href="#" class="nav-link px2 text-muted">FAQs</a>
+      </li>
+      <li class="nav-item">
+          <a href="#" class="nav-link px2 text-muted">About</a>
+      </li>
+      </ul>
+      <p class="text-center text-muted">@ 2021 Company, Inc</p>
+   </footer>
   </div>
- 
-</body>
+   <div class="b-example-divider"></div>
+</body> 
 </html>
