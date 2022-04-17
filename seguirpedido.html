@@ -8,95 +8,87 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <!--Color página-->
-    <style type="text/css">    
-      body{
-          color:rgb(0, 0, 0);
-          background-color:rgb(154, 233, 199) }
-    </style>
-
-  </head>
+<head>       
+    </div>
+    <style>.center {
+        text-align: center;
+    }    
+</style>
+</head>
 <body>
    <!-- navbar -->  
- <nav class="navbar navbar-expand-sm  navbar-light bg-light" >
-   <div class="container-fluid">
-     <a  class="navbar-brand"href="#">
-      <img scr="#" alt="" >
-    </a>
-      <button class ="navbar-toggler"
-       type="button"
-       data-toggle="collapse"
-       data-target="#navbarSupportedContent"
-       aria-controls="navbarSupportedContent"
-       aria-expanded="false"
-       aria-label="toogle navigation">
-       <span class="navbar-toggler-icon"> </span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="pp.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Seguimiento Pedido</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pp.html">Comprar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ">Ayuda</a>
-          </li>
-        </ul>
+   <nav class="navbar navbar-expand-sm  navbar-light bg-light" >
+    <div class="container-fluid">
+      <a  class="navbar-brand"href="#">
+       <img scr="#" alt="" >
+     </a>
+       <button class ="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="toogle navigation">
+        <span class="navbar-toggler-icon"> </span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="nav justify-content-center">
+           <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="pp.html">Home</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">Seguimiento Pedido</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="pp.html">Comprar</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link ">Ayuda</a>
+           </li>
+         </ul>
+     </div>
+          <!--carrito de compras-->
+          <p align="right">
+             <button type="button"
+                 class="btn btn-default btn-sm">
+                 <span class="glyphicon
+                     glyphicon-shopping-cart">
+                 </span>
+                 <img src="https://www.pikpng.com/pngl/m/366-3667953_noun-857895-cc-iconos-de-carrito-de-compra.png" width="20" height="20"> 
+                 <b> Add to Cart </b>               
+             </button>
+         </p>
+     </div>
+     </div>
+     </nav>  
     </div>
-         <!--carrito de compras-->
-         <p align="right">
-            <button type="button"
-                class="btn btn-default btn-sm">
-                <span class="glyphicon
-                    glyphicon-shopping-cart">
-                </span>
-                <img src="https://www.pikpng.com/pngl/m/366-3667953_noun-857895-cc-iconos-de-carrito-de-compra.png" width="20" height="20">  
-                <b> Add to Cart </b>
-            </button>
-        </p>
+  </nav>    
+<!--ENCABEZADO-->
+<div class="center">
+    <h5 style="background-color:powderblue;"> Realiza seguimiento en línea de tu compra</h5>
+    <p><h3> 
+        " Ingresa tu Número de Pedido" <br><small>Con letras y guión, ejemplo: OC_2021987654321 </small>
+        <br>
+    </h3>
+   </p>
+    <form action="ejemplo.php" method="get">
+        <p>Código: <input type="text" name="nombre" size="40"></p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+      </p>
+    </form>       
+</div>
+<style>.center {
+    text-align: center;
+}    
+</style>    
+
+    <div style="text-align: center;">      
+        <img src="https://get.wallhere.com/photo/animals-cats-gray-paws-1938087.jpg" width="250" height="250" />
     </div>
-    </div>
-    </nav>  
-   </div>
- </nav>
-<!--ENCABEZADO DE COMPRA-->
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="true"href="#">1.- Carrito de Compra</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">2.- Envío</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">3.- Detalles de Facturación</a>
-      </li>
-    </ul>
-  </div>
-  <!--PRODUCTO-->
-  <div class="card-body">
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-            <img src="https://dojiw2m9tvv09.cloudfront.net/43691/product/obt-gatoazul014762.png" width="100" height="100">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h6 class="card-title">Adult Cat Fish Oven-Baked 2.27 Kg</h6>
-            <p class="card-text">Descripción producto.</p>
-            <p class="card-text">$4.390</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-    </div> 
+    <title>Document</title>
+ 
   <!--Pie de página-->
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-light text-muted">
@@ -197,6 +189,6 @@
             </p>
             <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
             <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-          </div>
-</div>
+          </div>    
 </body>
+</html>
