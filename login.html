@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="login.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 <body>
-    <div class="form form--login">
-        <div class="form--heading">Welcome back! </div>
-        <form autocomplete="off">
-          <input type="text" placeholder="Name" maxlength="6"></form>
-          <input type="password" placeholder="Password" minlength="6">
-          <button class="button">Login</button>
-        </form>
-      </div>
+  <form action="#" method="POST">
+    <div id="login-box">
+        <h1>Login</h1> 
+
+        <div class="form">
+            <div class="item"> 
+                <i></i> 
+                <input type="email" placeholder="correo" name="correo"> 
+            </div>
+
+            <div class="item"> 
+                <i></i> 
+                <input type="password" placeholder="Contraseña" name="contraseña">
+            </div>
+
+        </div>
+        
+        <button type="submit">Login</button> 
     </div>
+</form>
+
     
 </body>
 </html>

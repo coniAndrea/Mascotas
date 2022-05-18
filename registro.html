@@ -15,22 +15,35 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="message signup">
-          <div class="btn-wrapper">
-            <button class="button" id="signup">Sign Up</button>
-            <button class="button" id="login"> Login</button>
+  <form class="row g-3-center" class="center">
+    <div class="center">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label-center">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+    </div>
+    <div class="center"></div>
+        <div class="col-md-6 " >
+         <label for="validationCustomUsername" class="form-label-center">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    <div class="center">
+       <div class="col-md-7">
+           <label for="inputPassword4" class="form-label_center">Password</label>
+           <input type="password" class="form-control" id="inputPassword4">
+         <div class="invalid-feedback"> 
+             Please choose a Password.
           </div>
         </div>
-        <div class="form form--signup">
-          <div class="form--heading">Welcome! Sign Up</div>
-          <form autocomplete="off">
-            <input type="text" placeholder="Name" minlength="6">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password" minlength="6"> 
-            <button class="button">Sign Up</button>
-          </form>
-        </div>
     </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
 </body>
 </html>

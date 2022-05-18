@@ -1,67 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="estilopp.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>little animals pet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <style type="text/css">
-     
-      body{
-          color:rgb(0, 0, 0);
-          background-color:rgb(255, 255, 255) }
-          * {
-            margin: 0;
-            padding: 0;
-        }
-        html,body {
-            height:100%;
-        }
-        /* Div que engloba el contenido de la página menos el footer */
-        #wrapper {
-            min-height:100%;
-        }
-        header {
-            display:block;
-            background:#ccc;
-            padding:10px 0px;
-        }
-        section {
-            overflow: auto;
-            /* Definimos el padding inferior:
-               50px del pie de pagina mas 10px de separacion
-            */
-            padding-bottom: 60px;
-            /* Definimos un padding superior */
-            padding-top:30px;
-        }
-        footer {
-            position: relative;
-            /* Altura total del footer en px con valor negativo */
-            margin-top: -10px;
-            /* Altura del footer en px. Se han restado los 5px del margen
-               superior mas los 5px del margen inferior
-            */
-            height: 40px;
-            padding:10px 0px;
-            clear: both;
-            background: #f5f7f7;
-            text-align: center;
-        }
+    <link href="clima.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" r
  
-        /* Esta clase define la anchura del contenido y la posicion centrada 
-           El contenido queda centrado y limitado, pero la cabecera y el pie
-           llegan hasta los limites del navegador.
-        */
-        .define {
-            width:960px;
-            margin:0 auto;
-        }
-  </style>
   </head>
 <body>
      <!-- navbar -->  
@@ -100,14 +50,37 @@
         </ul>
       </div>
    </div>
- </nav>
-     
+ </nav>     
 <!-- barra de busqueda -->
 <nav class="navbar navbar-light bg-light"align="right" >
     <div class="container-fluid">
       <img src="file:///C:/Users/ninos/OneDrive/Escritorio/logo2.jpeg" width="100" height="100" >
       <h1 align="center">Little Animals Pet</h1>
-
+<!-- clima -->
+      <body onload="onLoad()">
+        <div id="loader" class="loader">Cargando...</div>
+        <div id="container" class="contaier">
+          <div class="block">
+              <div id="location"></div>
+              <div id="date"></div>
+              <div id="description"></div>
+          </div>
+          <div class="block">
+              <div class="information-container">
+                  Temperatura
+                <div class="information" id="temperature"></div>
+              </div>
+              <div class="information-container">
+                 Humedad
+                <div class="information" id="humidity"></div>
+              </div>
+              <div class="information-container">
+                Presión
+               <div class="information" id="pressure"></div>
+              </div>
+          </div>
+        </div>
+      </body>
       <a class="navbar-brand"></a>
       <div class="box">
         <div class="container-1">
@@ -185,22 +158,20 @@
 <!-- banner -->
 
   
-  <div aling="Center">
-    <a href='perros.html'>
-      <img src="https://www.pethappy.cl/imagenes/banner/2207061640_CATEGORIAS-PET_01.png"  alt="Perros"/> </a>
-      <a href='gatos.html'>
-        <img src="https://www.pethappy.cl/imagenes/banner/2207061716_CATEGORIAS-PET_02.png"  alt="Gatos" /> </a>
-      <a href='aves.html'>
-        <img src="https://www.pethappy.cl/imagenes/banner/2207061735_CATEGORIAS-PET_03.png" alt="Aves"/></a>
-        <a href='roedores.html'>
-          <img src="https://www.pethappy.cl/imagenes/banner/2207061751_CATEGORIAS-PET_04.png"  alt="Roedores"/></a>
-          <a href='reptiles.html'>
-            <img src="https://www.pethappy.cl/imagenes/banner/2207061809_CATEGORIAS-PET_05.png"  alt="Reptiles" />
-            <a href='acuaticos.html'>
-              <img src="https://www.pethappy.cl/imagenes/banner/2207061821_CATEGORIAS-PET_06.png" alt="Acuaticos" /></a>
-                        
-  </div>
-     
+<div align="center">
+  <a href='perros.html'>
+    <img src="https://www.pethappy.cl/imagenes/banner/2207061640_CATEGORIAS-PET_01.png"  alt="Perros"/> </a>
+  <a href='gatos.html'>
+    <img src="https://www.pethappy.cl/imagenes/banner/2207061716_CATEGORIAS-PET_02.png"  alt="Gatos" /> </a>
+  <a href='aves.html'>
+    <img src="https://www.pethappy.cl/imagenes/banner/2207061735_CATEGORIAS-PET_03.png" alt="Aves"/></a>
+  <a href='roedores.html'>
+    <img src="https://www.pethappy.cl/imagenes/banner/2207061751_CATEGORIAS-PET_04.png"  alt="Roedores"/></a>
+  <a href='reptiles.html'>
+    <img src="https://www.pethappy.cl/imagenes/banner/2207061809_CATEGORIAS-PET_05.png"  alt="Reptiles" />
+  <a href='acuaticos.html'>
+    <img src="https://www.pethappy.cl/imagenes/banner/2207061821_CATEGORIAS-PET_06.png" alt="Acuaticos" /></a>                
+</div>
 
    <!--carrusel-->
    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -281,7 +252,7 @@
           <img class="card-img-top w-50 h-50" src="https://www.tusmascotas.cl/wp-content/uploads/2021/11/bravecto.png.webp">            
           <div class="card-body">
             <h4 class="card-title">Bravecto gatos 250mg-2,8-25kg</h4>
-            <p class="card-text">$20.000/p>
+            <p class="card-text">$20.000
             <a href="compras.html" class="btn btn-primary">Comprar</a>
           </div>
         </div>          
@@ -290,39 +261,119 @@
    
    <div style="text-align: center;">
       <h1 align="center">Acerca de Nosotros</h1>
-      <p class="card-text">Empezo con una venta de productos de mascotas por un grupo de amigas, todo esto para ayudar
-          a una fundación sin fines de lucro,comenzo por redes sociales. Para poder seguir apoyando a la fundación ustedes pueden aportar con donaciones
-          para todas aquellos animales que necesitan apoyo en diferentes dificultades que ellos puedan tener.
-      </p>
-
+      <h4>Empezo con una venta de productos de mascotas por un grupo de amigas, todo esto para ayudar</h4>
+      <h4> a una fundación sin fines de lucro,comenzo por redes sociales. Para poder seguir apoyando a la fundación ustedes pueden aportar con donaciones</h4>
+      <h4>para todas aquellos animales que necesitan apoyo en diferentes dificultades que ellos puedan tener.</h4>
     </div>
-     
-      <div>
-      </div>
   <!--Pie de página-->
-  <div class="container">
-    <footer class="py-5">
-      <div class="row">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-            <a href="#" class="nav-link px2 text-muted">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px2 text-muted">Features</a>
-      </li>
-      <li class="nav-item">
-          <a href="#" class="nav-link px2 text-muted">Pricing</a>
-      </li>
-      <li class="nav-item">
-          <a href="#" class="nav-link px2 text-muted">FAQs</a>
-      </li>
-      <li class="nav-item">
-          <a href="#" class="nav-link px2 text-muted">About</a>
-      </li>
-      </ul>
-      <p class="text-center text-muted">@ 2022 Company, Inc</p>
-   </footer>
-  </div>
-   <div class="b-example-divider"></div>
+  <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+     <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+     >
+    <!-- Right -->
+     <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Litle Animals Pet</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+           MENÚ PRINCIPAL
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">About</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Shop</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+           PRODUCTOS
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Transporte y Seguridad</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Salud y Bienestar</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vestuario y Accesorios</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Alimentos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Platos Y Bebedores</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Camas Y Estar</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            ENCUENTRANOS EN 
+          </h6>
+          <p><i class="fas fa-home me-3"></i>Facebook</p>
+          <p><i class="fas fa-envelope me-3"></i>Twitter </p>
+          <p><i class="fas fa-phone me-3"></i> Instragram</p>
+          <p><i class="fas fa-print me-3"></i> WhatsApp</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+ </footer>
+<!-- Footer -->
+<script src="clima.js"></script>
 </body> 
 </html>
