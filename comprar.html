@@ -10,22 +10,23 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
       <!--Enlace JS-->
-	    <script src="formulario.js"></script>
-	    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-      <!--Enlace CSS-->
-      <link rel="stylesheet" href="CSS/estilo2.css">
-      
-      <title>littleAnimalsPet</title>
+	    <script src="JS/compra.js"></script>
 
-  <!--Color página-->
-  <style type="text/css">    
+      <!--Enlace CSS-->
+      <link rel="stylesheet" href="CSS/estilo1.css">
+      
+      <title>littleAnimalsPet</title> 
+    
+<!--Color página-->
+<style type="text/css">    
     body{
         color:rgb(0, 0, 0);
         background-color:rgba(235, 243, 242, 0.81) }
   </style>
-</head>
+
+  </head>
 <body>
- <!-- navbar -->  
+   <!-- navbar -->  
  <nav class="navbar navbar-expand-sm  navbar-light bg-light" >
   <div class="container-fluid">
     <a  class="navbar-brand"href="#">
@@ -81,98 +82,46 @@
        </p>
    </div>
    </nav>  
-
-  <!--ENCABEZADO DE COMPRA-ENVIO-->
+<!--ENCABEZADO DE COMPRA-->
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link" href="comprar.html">1.- Carrito de Compra</a>
+        <a class="nav-link active" aria-current="true"href="#">1.- Carrito de Compra</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" aria-current="true" href="#">2.- Envío</a>
+        <a class="nav-link" href="envio.html">2.- Envío</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="pago.html">3.- Detalles de Facturación</a>
       </li>
     </ul>
   </div>
-  <!--Detalle envio-->
-  <main>
-		<form action="" class="formulario" id="formulario">
-			<!-- Grupo: Nombre -->
-			<div class="formulario__grupo" id="grupo__nombre">
-				<label for="nombre" class="formulario__label">Nombre</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ninoska">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
-			</div>
+<!--Código compra-->
+  <div class="container">
+    <div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        <main id="items" class="col-sm-8 row"></main>
+        <!-- Carrito -->
+        <aside class="col-sm-4">
+            <h2>Tu Pedido</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: &dollar;<span id="total"></span></p>
+            <button id="boton-vaciar" class="btn btn-danger" >Vaciar</button>
+        </aside>
+    </div>
+</div>
 
-      <!-- Grupo: Apellido -->
-			<div class="formulario__grupo" id="grupo__apellido">
-				<label for="apellido" class="formulario__label">Apellido</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Muñoz">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">El Apellido tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
-			</div> 
+ <!--Botón-->
+ <div class="d-grid gap-2 d-md-block">
+  <a href="pp.html"><button type="button" class="btn btn-outline-secondary">Cancelar</button></a>
+ <a href="envio.html"><button type="button" class="btn btn-outline-secondary">Siguiente</button></a> 
+</div>
 
-     <!-- Grupo: direccion -->
-			<div class="formulario__grupo" id="grupo__direccion">
-				<label for="direccion" class="formulario__label">Dirección</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">El dirección tiene que ser de 4 a 16 dígitos y solo puede contener numeros y letras.</p>
-			</div>
-
-      <!--Región-->
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Región</option>
-        <option value="1">Metropolitana</option>
-      </select>
-
-      <!--Comuna-->
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Comuna</option>
-        <option value="1">San Joaquin</option>
-      </select>
-
-      <!-- Grupo: Código postal -->
-			<div class="formulario__grupo" id="grupo__codigo_postal">
-				<label for="codigo_postal" class="formulario__label">Código postal</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="codigo_postal" id="codigo_postal" placeholder="50060080000">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">El codigo postal solo puede contener números y el maximo son 12 dígitos.</p>
-			</div>
-
-      <!-- Grupo: Teléfono -->
-			<div class="formulario__grupo" id="grupo__telefono">
-				<label for="telefono" class="formulario__label">Teléfono</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="958950516">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">El telefono solo puede contener números y el maximo son 12 dígitos.</p>
-			</div>
-
-      <!--Botón-->
-      <p align="right">
-      <div class="d-grid gap-2 d-md-block">
-			<a href="comprar.html"><button type="button" class="btn btn-outline-secondary">Cancelar</button></a>
-      <a href="pago.html"><button type="button" class="btn btn-outline-secondary">Siguiente</button></a>
-      </div>
-    </p>
-
-    </main>    
-
-  <!--Pie de página-->
+<!--Pie de página-->
 <div class="container">
   <footer class="py-5">
     <div class="row">
@@ -181,19 +130,19 @@
           <a href="pp.html" class="nav-link px2 text-muted">Inicio</a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link px2 text-muted">Acerca de</a>
+        <a href="pp.html" class="nav-link px2 text-muted">Acerca de</a>
     </li>
     <li class="nav-item">
         <a href="pp.html" class="nav-link px2 text-muted">Tienda</a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link px2 text-muted">Ayuda</a>
+        <a href="pp.html" class="nav-link px2 text-muted">Ayuda</a>
     </li>
     </ul>
     <p class="text-center text-muted">@ 2022 Company, Inc</p>
  </footer>
 </div>
  <div class="b-example-divider"></div>     
-</div>  
+</div>
 </body>
 </html>
