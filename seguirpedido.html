@@ -20,6 +20,13 @@
         text-align: center;
     }    
 </style>
+
+<style>
+  #map{
+    margin: 20px;
+  }
+</style>
+
 </head>
 <body>
      <!-- navbar -->  
@@ -98,11 +105,34 @@
     text-align: center;
 }    
 </style>    
+<div style="text-align: center;">  
+<button onclick="findMe()">Mostrar mi ubicación</button>
+<div id="map"></div>
 
-    <div style="text-align: center;">      
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6654.118994769988!2d-70.61301716964604!3d-33.49982912589709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses-419!2scl!4v1651895530022!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
- 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1IH_7XELVMY_fFNucrU5MUKAuw-xEpbI"></script>
+<script>
+  function findMe(){
+    var output = document.getElementById('map');
+    // Verificar si soporta geolocalizacion
+    if (navigator.geolocation) {
+      output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
+    }else{
+      output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
+    }
+    //Obtenemos latitud y longitud
+    function localizacion(posicion){
+      var latitude = posicion.coords.latitude;
+      var longitude = posicion.coords.longitude;
+      var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyD1IH_7XELVMY_fFNucrU5MUKAuw-xEpbI";
+      output.innerHTML ="<img src='"+imgURL+"'>";			
+    }
+    function error(){
+      output.innerHTML = "<p>No se pudo obtener tu ubicaciÃ³n</p>";
+    }
+    navigator.geolocation.getCurrentPosition(localizacion,error);
+  }
+</script>
+</div>
 <!--Pie de página-->
 <div class="container">
   <footer class="py-5">
